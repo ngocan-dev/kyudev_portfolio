@@ -21,7 +21,7 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { Roles } from "@/types/globals";
+import type { Role } from "@/features/auth/constants/roles";
 
 import { removeRole, setRole } from "../actions";
 
@@ -36,7 +36,7 @@ interface UserData extends Partial<User> {
 	raw: UserJSON | null;
 }
 
-const getRoleColor = (role: Roles) => {
+const getRoleColor = (role: Role) => {
 	switch (role) {
 		case "admin":
 			return "bg-red-100 text-red-800";
@@ -92,7 +92,7 @@ export const columns: ColumnDef<UserData>[] = [
 		header: "Role",
 		cell: ({ row }) => {
 			const user = row.original;
-			const role = user.publicMetadata.role as Roles;
+			const role = user.publicMetadata.role as Role;
 
 			return <Badge className={cn(getRoleColor(role), "capitalize")}>{role ?? "User"}</Badge>;
 		},

@@ -3,10 +3,10 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 
-import { Roles } from "@/types/globals";
-import { requireAdmin } from "@/utils/admin-protection";
+import type { Role } from "@/features/auth/constants/roles";
+import { requireAdmin } from "@/features/auth/authorization/require-admin";
 
-export async function setRole(data: { userId: string; role: Roles }) {
+export async function setRole(data: { userId: string; role: Role }) {
 	await requireAdmin();
 
 	const client = await clerkClient();

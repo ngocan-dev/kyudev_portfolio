@@ -1,6 +1,6 @@
 "use client";
 
-import { AuthButton } from "@/components/auth-button";
+import { AuthButton } from "@/features/auth/components/auth-button";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";

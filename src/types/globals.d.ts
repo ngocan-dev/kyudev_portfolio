@@ -1,12 +1,12 @@
-export {};
+import type { Role } from "@/features/auth/constants/roles";
 
-export type Roles = "admin" | "moderator";
+export {};
 
 declare global {
 	interface CustomJwtSessionClaims {
 		metadata: {
 			onboardingComplete?: boolean;
-			role?: Roles;
+			role?: Role;
 		};
 	}
 }

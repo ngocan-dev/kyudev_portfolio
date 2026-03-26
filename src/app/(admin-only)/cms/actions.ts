@@ -4,7 +4,7 @@ import { Project, RepoScope, Token } from "generated/prisma";
 
 import { prisma } from "@/lib/db";
 import { GitHubRepositoryError, createGitHubAPI } from "@/lib/github-api";
-import { requireAdmin } from "@/utils/admin-protection";
+import { requireAdmin } from "@/features/auth/authorization/require-admin";
 
 import { DEFAULT_EXPIRE_TIME } from "./components/token-manager-table";
 
