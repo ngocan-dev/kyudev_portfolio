@@ -1,4 +1,4 @@
-# Xiro Portfolio (Next.js)
+#  Portfolio (Next.js)
 
 A production-oriented personal portfolio and project showcase built with **Next.js App Router**, **TypeScript**, **Prisma**, and **Clerk**.
 
